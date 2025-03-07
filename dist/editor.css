@@ -1,0 +1,160 @@
+[data-flux-editor] [data-slot="content"] {
+    outline: none;
+    white-space: pre-wrap;
+}
+
+/* The :where() is here to allow easy overriding of these styles in your own CSS... */
+:where([data-flux-editor] [data-slot="content"]) {
+    padding: 1rem;
+    min-height: 200px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+[data-flux-editor] [data-slot="content"] p.is-editor-empty:first-child::before {
+    color: #a1a1aa; /* text-zinc-400 */
+    content: attr(data-placeholder);
+    float: left;
+    height: 0;
+    pointer-events: none;
+}
+
+[data-flux-editor][disabled] [data-slot="content"] p.is-editor-empty:first-child::before {
+    color: rgba(161 161 170 / 0.7); /* text-zinc-400/70 */
+}
+
+[data-flux-editor][disabled] [data-slot="content"] p.is-editor-empty:first-child::before:where(.dark, .dark *) {
+    color: #71717a; /* text-zinc-500 */
+}
+
+[data-flux-editor] [data-slot="content"] > *:first-child {
+    margin-top: 0 !important;
+}
+
+[data-flux-editor] [data-slot="content"] > *:last-child {
+    margin-bottom: 0;
+}
+
+[data-flux-editor] [data-slot="content"] {
+    font-size: .875rem;
+    line-height: 1.7142857;
+}
+
+[data-flux-editor] [data-slot="content"] a {
+    color: #2563EB;
+    font-weight: 500
+}
+
+[data-flux-editor] [data-slot="content"] a:where(.dark, .dark *) {
+    color: #6791fd;
+}
+
+[data-flux-editor] [data-slot="content"] strong {
+    font-weight: 600;
+}
+
+[data-flux-editor] [data-slot="content"] code:not(pre code) {
+    display: inline-block;
+    font-size: .8275rem;
+    font-family: monospace;
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+    background-color: rgb(82 82 91 / 0.1);
+    border-radius: 0.5rem;
+    white-space: nowrap;
+}
+
+[data-flux-editor] [data-slot="content"] pre {
+    background-color: rgb(82 82 91 / 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+[data-flux-editor] [data-slot="content"] pre > code {
+    font-weight: 500;
+    font-family: monospace;
+}
+
+[data-flux-editor] [data-slot="content"] > p {
+    margin-top: 1.1428571em;
+    margin-bottom: 1.1428571em
+}
+
+[data-flux-editor] [data-slot="content"] > h1 {
+    font-weight: 800;
+    font-size: 2.1428571em;
+    margin-top: 0;
+    margin-bottom: .8em;
+    line-height: 1.2
+}
+
+[data-flux-editor] [data-slot="content"] > h2 {
+    font-weight: 700;
+    font-size: 1.4285714em;
+    margin-top: 1.6em;
+    margin-bottom: .8em;
+    line-height: 1.4
+}
+
+[data-flux-editor] [data-slot="content"] > h3 {
+    font-weight: 600;
+    font-size: 1.2857143em;
+    margin-top: 1.5555556em;
+    margin-bottom: .4444444em;
+    line-height: 1.5555556
+}
+
+[data-flux-editor] [data-slot="content"] > blockquote::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: .25rem;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: .25rem;
+}
+
+[data-flux-editor] [data-slot="content"] > blockquote {
+    position: relative;
+    font-style: italic;
+    margin-top: 1.3333333em;
+    margin-bottom: 1.3333333em;
+    padding-inline-start:1.1111111em
+}
+
+[data-flux-editor] [data-slot="content"] > img, [data-flux-editor] [data-slot="content"] > picture, [data-flux-editor] [data-slot="content"] > video {
+    margin-top: 1.7142857em;
+    margin-bottom: 1.7142857em
+}
+
+[data-flux-editor] [data-slot="content"] img.ProseMirror-selectednode {
+    outline: 2px solid blue;
+}
+
+[data-flux-editor] [data-slot="content"] > ol {
+    margin-top: 1.1428571em;
+    margin-bottom: 1.1428571em;
+    padding-inline-start:1.5714286em;
+}
+
+[data-flux-editor] [data-slot="content"] > ul {
+    margin-top: 1.1428571em;
+    margin-bottom: 1.1428571em;
+    padding-inline-start:1.5714286em;
+}
+
+[data-flux-editor] [data-slot="content"] li {
+    margin-top: .2857143em;
+    margin-bottom: .2857143em;
+}
+
+[data-flux-editor] [data-slot="content"] ol > li {
+    list-style-type: decimal;
+    padding-inline-start:.4285714em;
+}
+
+[data-flux-editor] [data-slot="content"] ul > li {
+    list-style-type: disc;
+    padding-inline-start:.4285714em;
+}

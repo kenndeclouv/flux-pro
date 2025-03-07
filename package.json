@@ -1,0 +1,39 @@
+{
+    "main": "js/index.js",
+    "module": "js/index.js",
+    "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/livewire/flux"
+    },
+    "dependencies": {
+        "@floating-ui/dom": "^1.6.5",
+        "@oddbird/popover-polyfill": "^0.5.0",
+        "@tiptap/core": "^2.9.1",
+        "@tiptap/extension-code": "^2.10.2",
+        "@tiptap/extension-code-block": "^2.10.2",
+        "@tiptap/extension-highlight": "^2.10.2",
+        "@tiptap/extension-horizontal-rule": "^2.10.2",
+        "@tiptap/extension-link": "^2.9.1",
+        "@tiptap/extension-placeholder": "^2.10.2",
+        "@tiptap/extension-subscript": "^2.10.2",
+        "@tiptap/extension-superscript": "^2.10.2",
+        "@tiptap/extension-text-align": "^2.9.1",
+        "@tiptap/extension-underline": "^2.9.1",
+        "@tiptap/pm": "^2.9.1",
+        "@tiptap/starter-kit": "^2.9.1"
+    },
+    "devDependencies": {
+        "@playwright/test": "^1.44.1",
+        "brotli-size": "^4.0.0",
+        "esbuild": "0.23.0"
+    },
+    "scripts": {
+        "test": "npx playwright test --ui",
+        "build": "node build.js",
+        "watch": "esbuild js/index.js --bundle --format=esm --outfile=dist/flux.module.js --watch",
+        "esbuild:module": "esbuild js/index.js --bundle --format=esm --outfile=dist/flux.module.js --metafile=dist/meta.json",
+        "esbuild:cdn": "esbuild js/index.js --bundle --outfile=dist/flux.js",
+        "esbuild:cdn-minified": "esbuild js/index.js --bundle --minify --outfile=dist/flux.min.js"
+    }
+}

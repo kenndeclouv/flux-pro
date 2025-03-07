@@ -1,0 +1,2 @@
+
+{!! app('flux')->editorScripts() !!}
