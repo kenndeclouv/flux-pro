@@ -4,7 +4,7 @@
 
 Clone the repo:
 ```
-git clone git@github.com:livewire/flux.git
+git clone git@github.com:knndeclouv/flux.git
 ```
 
 Set up the environment:
@@ -30,7 +30,7 @@ composer config repositories.local '{"type": "path", "url": "./../flux"}' --file
 Now, you can run:
 
 ```
-composer require livewire/flux:dev-main --dev
+composer require knndeclouv/flux:dev-main --dev
 ```
 
 > Note: You might have to change your app's "minimum-stability" to "dev" in your `composer.json` file.

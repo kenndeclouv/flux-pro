@@ -4,7 +4,7 @@
     "type": "module",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/livewire/flux"
+        "url": "git+https://github.com/knndeclouv/flux"
     },
     "dependencies": {
         "@floating-ui/dom": "^1.6.5",
